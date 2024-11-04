@@ -1,9 +1,9 @@
-name: atrifact
+name: artifact
 
 on: [push]
 
 env:
-  ARTIFACT_NAME: myatrifact
+  ARTIFACT_NAME: myartifact
 
 jobs:
   main:
@@ -11,8 +11,8 @@ jobs:
     steps:
       - name: Check out the code
         uses: actions/checkout@v2
-      - name: Upload the atrifact
+      - name: Upload the artifact
         uses: actions/upload-artifact@v2
         with:
-          name: ${{ env.ATRIFACT_NAME }}
+          name: ${{ env.ARTIFACT_NAME }}
           path: .
